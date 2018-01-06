@@ -8,7 +8,9 @@ datasets的实验表明没有现存方法那样特征工程的帮助下，我们
 Many previous approaches to Chinese word segmentation formalize this problem as character-based sequence labeling task so that only context info within fixed size local windows and interactions between adjacent tags can be capture. in this pater, wo proposed a novel neural network, which elimaate context window and utilize complete segmentation history. Our model employs a gated combination NN over character to produce distributed representation of word candidates, which are then given to a LSTM language scoring model. Experiments on benchmark datasets show that without the help of featurs engineering as most existing approaches, our mdoels achieve competitive or better performances with previous state-of-the-art methods.
 
 1 Introduction
+
 许多东亚语言包括汉语是没有明显的word delimiters， 所以，分词的处理这些语言初步措施，自从某，许多方法将中文分词视为序列标注问题with character position tags，这就可以被监督学习方法处理，如最大熵模型和条件随机场。但是这些方法都严重依赖人工设计特征的选择（**介绍任务的由来，传统方法及其不足**）。
+
 Most east Asia language including Chinese are written without explicit word delimiters, therefor, word segmentation is a preliminary step for processing those languages. Since , most methods formalize Chinese word segmentation as suqence labelling problem with character position tags, which can be handled with supervised learnig methods such as ME and CRF; However, those mothods heavily depend on handcrafted features.
 
 最近，神经方法因为最小化特征工程影响的能力在NLP任务中被广泛应用。在CWS中，某采用一个某提出的通用NN结构序列标注问题。然后采用chatacter-based embedding 输入进两层的nerwork. 某通过对local context和  previous tags的相互作用进行建模而提升了上一个方法的性能。。。（**本系列以往方法**）
